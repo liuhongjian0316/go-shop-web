@@ -1,0 +1,86 @@
+//使用*.module.css / *.module.less / *.module.scss 这样的命名方式可以避免样式混乱
+.header{
+  height: 5rem;
+  line-height: 5rem;
+  width:100vw;
+  background: #8c97a7;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 1vw 10vw;
+  position: relative;
+
+  .logoText{
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #f8f8f8;
+    font-size: 1.5rem;
+  }
+
+  .endBox{
+    position: absolute;
+    right: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    padding: 1vw 0vw 1vw 0vw;
+    overflow: hidden;
+    .icon {
+      height: auto;
+      width: 3rem;
+      background: #3197fb;
+      margin: 0.4rem;
+    }
+  }
+  .user{
+
+  }
+}
+
+.viteReact{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .vite{
+    height: 40px;
+    width:40px;
+    animation-name: vite-spin;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+
+  .react{
+    height: 40px;
+    width:40px;
+    animation-name: react-spin;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+
+  .react:hover{
+    animation-play-state: paused;
+  }
+}
+
+@keyframes react-spin{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes vite-spin{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
