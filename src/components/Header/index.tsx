@@ -63,15 +63,14 @@ class Index extends React.Component{
           <div className={HeaderStyle.viteReact}>
             <img src={reactIcon} className={HeaderStyle.react} alt={"react"} />
             <div className={HeaderStyle.logoText}>GO 商城</div>
-
-            <div className={HeaderStyle.endBox}>
-              <Icon disabled name='search' className={HeaderStyle.icon}/>
-              <Icon disabled name='user' className={HeaderStyle.icon}/>
-              <Icon disabled name='shopping cart' className={HeaderStyle.icon}/>
+          </div>
+          <div className={HeaderStyle.endBox}>
+              <Icon name='search' className={HeaderStyle.icon}/>
+              <Icon name='user' className={HeaderStyle.icon} />
+              <Icon name='shopping cart' className={HeaderStyle.icon} />
               <Icon name='bars' className={HeaderStyle.icon} onClick={this.changeMenu}/>
               {(<Icon name={this.state.isFull ? 'compress': 'expand'} className={HeaderStyle.icon} onClick={this.changeFull}/>)}
             </div>
-          </div>
         </div>
     )
   }

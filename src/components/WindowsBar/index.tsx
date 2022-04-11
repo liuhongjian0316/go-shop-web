@@ -156,21 +156,6 @@ function Index() {
                     <Segment basic style={{margin:'0px',padding:'0px'}}>
                         <div style={{height:'100vh'}}>
                             <TopHeader isFull={full} isMenu={visible} onChangeFull={onChangeFull} onChangeMenu={onChangeMenu}/>
-                            <Button
-                                onClick={() =>
-                                    showBar(!visible)
-                                }
-                            >
-                                打开/关闭
-                            </Button>
-
-                            <Button
-                                onClick={()=>{
-                                    fullScreen(!full)
-                                }}
-                            >
-                                打开/关闭
-                            </Button>
                         </div>
                     </Segment>
                 </Sidebar.Pusher>

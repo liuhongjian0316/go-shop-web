@@ -5,10 +5,11 @@
   width:100vw;
   background: #8c97a7;
   overflow: hidden;
-  display: flex;
-  align-items: center;
   padding: 1vw 10vw;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .logoText{
     font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -18,10 +19,10 @@
   }
 
   .endBox{
-    position: absolute;
+    flex: 10;
     right: 10vw;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     height: 3rem;
     padding: 1vw 0vw 1vw 0vw;
@@ -29,8 +30,12 @@
     .icon {
       height: auto;
       width: 3rem;
-      background: #3197fb;
       margin: 0.4rem;
+    }
+    .icon:hover {
+      color: #f8f8f8;
+      font-weight: bold;
+      transform: scale(1.3);
     }
   }
   .user{

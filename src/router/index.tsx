@@ -21,7 +21,10 @@ const Router = () => {
     {
       path: "/",
       element: <Home2 />,
-      children: [{ path: "/:id", element: <HomeChildren /> }],
+    },
+    {
+      path: "/home",
+      element: <Home2 />,
     },
     { path: "/about/:name/:age", element: <About /> },
     { path: "/more", element: <More /> },

@@ -32,7 +32,7 @@ export default ({ mode }: { mode: string }) => {
     //服务
     server: {
       //服务器主机名
-      host: "localhost",
+      host: "0.0.0.0",
       //端口号
       port: 8881,
       strictPort: true, //设为 true 时若端口已被占用则会直接退出,而不是尝试下一个可用端口
