@@ -17,11 +17,13 @@ class Index extends React.Component{
     this.state = {
       isFull:isFull,
       isMenu:isMenu,
+      textInput:null
     };
     this.changeIsFull = this.changeIsFull.bind(this)
     this.changeIsMenu = this.changeIsMenu.bind(this)
     this.changeFull = this.changeFull.bind(this)
     this.changeMenu = this.changeMenu.bind(this)
+    this.showKeys = this.showKeys.bind(this)
   }
   componentWillReceiveProps(nextProps: { isFull: any; isMenu: any; }){
     this.setState({
@@ -55,6 +57,9 @@ class Index extends React.Component{
     })
     onChangeMenu(this.state.isMenu)
   }
+  showKeys(){
+    this.state.textInput.focus()
+  }
 
 
   render(){
@@ -65,7 +70,13 @@ class Index extends React.Component{
             <div className={HeaderStyle.logoText}>GO 商城</div>
           </div>
           <div className={HeaderStyle.endBox}>
-              <Icon name='search' className={HeaderStyle.icon}/>
+              <div className={HeaderStyle.searchBox} onClick={this.showKeys}>
+                <input type="text" className={HeaderStyle.searchInput}
+                       ref={input => (this.state.textInput = input)}/>
+                <a href="#" className={HeaderStyle.searchBtn}>
+                  <Icon name='search' className={HeaderStyle.icon_search}/>
+                </a>
+              </div>
               <Icon name='user' className={HeaderStyle.icon} />
               <Icon name='shopping cart' className={HeaderStyle.icon} />
               <Icon name='bars' className={HeaderStyle.icon} onClick={this.changeMenu}/>

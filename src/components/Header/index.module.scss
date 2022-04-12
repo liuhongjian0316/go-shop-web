@@ -5,7 +5,7 @@
   width:100vw;
   background: #8c97a7;
   overflow: hidden;
-  padding: 1vw 10vw;
+  padding: 1vw 0vw;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -22,15 +22,56 @@
     flex: 10;
     right: 10vw;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     height: 3rem;
     padding: 1vw 0vw 1vw 0vw;
     overflow: hidden;
+    .searchBox{
+      height: 2rem;
+      background: #2c3e50;
+      padding: 10px;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .searchInput{
+        background: none;
+        border: none;
+        outline: none;
+        color:white;
+        font-size: 1rem;
+        width: 0rem;
+        transition: 0.5s;
+      }
+      .searchBtn{
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #e67e22;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 50%;
+        .icon_search{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .searchBox:hover .searchInput{
+      width: 7rem;
+    }
+    .searchBox:hover{
+      margin: 0rem 1rem;
+    }
+
+
     .icon {
       height: auto;
       width: 3rem;
-      margin: 0.4rem;
     }
     .icon:hover {
       color: #f8f8f8;
