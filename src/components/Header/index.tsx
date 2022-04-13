@@ -71,7 +71,7 @@ class Index extends React.Component{
           </div>
           <div className={HeaderStyle.endBox}>
               <div className={HeaderStyle.searchBox} onClick={this.showKeys}>
-                <input type="text" className={HeaderStyle.searchInput}
+                <input type="search" className={HeaderStyle.searchInput} confirm-type={'search'}
                        ref={input => (this.state.textInput = input)}/>
                 <a href="#" className={HeaderStyle.searchBtn}>
                   <Icon name='search' className={HeaderStyle.icon_search}/>
@@ -79,7 +79,7 @@ class Index extends React.Component{
               </div>
               <Icon name='user' className={HeaderStyle.icon} />
               <Icon name='shopping cart' className={HeaderStyle.icon} />
-              <Icon name='bars' className={HeaderStyle.icon} onClick={this.changeMenu}/>
+              <Icon name='windows' className={HeaderStyle.icon} onClick={this.changeMenu}/>
               {(<Icon name={this.state.isFull ? 'compress': 'expand'} className={HeaderStyle.icon} onClick={this.changeFull}/>)}
             </div>
         </div>

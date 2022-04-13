@@ -1,7 +1,7 @@
 //使用*.module.css / *.module.less / *.module.scss 这样的命名方式可以避免样式混乱
 .header{
-  height: 5rem;
-  line-height: 5rem;
+  height: 4rem;
+  line-height: 4rem;
   width:100vw;
   background: #8c97a7;
   overflow: hidden;
@@ -74,8 +74,6 @@
       width: 3rem;
     }
     .icon:hover {
-      color: #f8f8f8;
-      font-weight: bold;
       transform: scale(1.3);
     }
   }

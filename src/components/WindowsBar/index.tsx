@@ -87,7 +87,7 @@ const BottomBar = ({ visible }:any) => (
                         inverted
                         trigger={
                             <Grid.Column>
-                                <Icon name={item.icon} size='large'/>
+                                <Icon name={item.icon} size='large' className={'bar-icon'}/>
                             </Grid.Column>
                         }
                     />
